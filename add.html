@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>List Your Business</title><style>body{font-family:system-ui;padding:15px;background:#f5f5f7}input,textarea,select{width:100%;padding:12px;margin:8px 0;border-radius:10px;border:1px solid #ddd}button{background:#0a7a3a;color:white;padding:14px;border:none;border-radius:10px;width:100%;font-weight:700}</style></head>
+<body><h2>+ List Your Business (Free)</h2><p>Fill form, tap Submit - it will open WhatsApp to me to approve you.</p>
+<input id="bname" placeholder="Business Name: e.g Swa Ka Lova Meat">
+<input id="bloc" placeholder="Location: e.g NU2 Motherwell">
+<select id="bcat"><option>Meat</option><option>Shisanyama</option><option>Hair</option><option>Spaza</option><option>Services</option><option>Other</option></select>
+<textarea id="bdesc" placeholder="What do you sell?"></textarea>
+<input id="bwa" placeholder="Your WhatsApp number: 27...">
+<button onclick="submitBiz()">Submit via WhatsApp</button>
+<script>
+function submitBiz(){
+let msg=`NEW BUSINESS FOR MOTHERWELL CONNECT:%0AName: ${bname.value}%0ALocation: ${bloc.value}%0ACategory: ${bcat.value}%0ADesc: ${bdesc.value}%0AWhatsApp: ${bwa.value}`;
+window.location.href=`https://wa.me/27YOURNUMBER?text=${msg}`;
+}
+</script></body></html>
